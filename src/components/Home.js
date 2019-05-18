@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+import Pokeball from '../Pokeball.png';
 
 class Home extends Component {
     state = {
@@ -20,6 +21,7 @@ class Home extends Component {
             posts.map(post => {
                 return (
                     <div className="post card" key={post.id}>
+                        <img src={Pokeball} alt="Pokeball" />
                         <div className="card-content">
                             <span className="card-title">{post.title}</span>
                             <p>{post.body}</p>
